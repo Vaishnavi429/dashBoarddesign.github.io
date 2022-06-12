@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="Style.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.3/font/bootstrap-icons.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
+        crossorigin="anonymous"></script>
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="fluid-container main-container">
+        <!-- --------------------left- side menu--------- -->
+        <div class="left-side">
+            <div class="logo">
+                <h2><i class="bi bi-person-circle"></i> LogoBrand</h2>
+            </div>
+            <div class="menu">
+                <ul>
+                    <li> <i class="bi bi-house-door-fill"></i> Dashboard</li>
+                    <li><i class="bi bi-clipboard2-check"></i> Tactics Vault</li>
+                    <li> <i class="bi bi-person-rolodex"></i> Teams</li>
+                    <li class="Active"> <i class="bi bi-pencil-square"></i> schelude Generator</li>
+                    <li> <i class="bi bi-calendar-week"></i> Weekly Training plan</li>
+                    <li> <i class="bi bi-bar-chart"></i> Team Metrics</li>
+                    <li> <i class="bi bi-gear-fill"></i> Customization</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- ---------------------------------------------------------       -->
+        <div class="schedule-container">
+            <div class="schedule-header">
+                <h2>Teams</h2>
+            </div>
+            <!-- --------------------add schedule botton trigger---------------- -->
+            <div class="schedule-button">
+                <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+                    Add new schedule
+                </button>
+
+                <!-- Modal -->
+                <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false"
+                    tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered">
+                        <div class="modal-dialog modal-lg">
+                            <div class="modal-content ">
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="staticBackdropLabel">Create New Schedule </h5>
+                                </div>
+                                <div class="modal-body">
+                                    <div class="mb-3">
+                                        <label for="scheduleName" class="form-label">Schedule Name</label>
+                                        <input type="text" class="form-control" id="ScheduleNameID"
+                                            aria-describedby="emailHelp" placeholder="Enter Name">
+                                    </div>
+                                    <div class="schedule-date d-flex flex-row ">
+                                        <div>
+                                            <label for="Start Date" class="form-label ">Start Date</label>
+                                            <input type="date" class="form-control designInput" id="startDateID"
+                                                aria-describedby="emailHelp" placeholder="Select Start Date">
+                                        </div>
+                                        <div>
+                                            <label for="End Date" class="form-label">End Date</label>
+                                            <input type="date" class="form-control designInput" id="endDateID"
+                                                aria-describedby="emailHelp" placeholder="Select End Date">
+                                        </div>
+                                        <div>
+                                            <label for="Number Of Week" class="form-label">Enter No. Of Week</label>
+                                            <input type="number" class="form-control designInput" id="numberOfWeekID"
+                                                aria-describedby="emailHelp" placeholder="Enter No. Of Week">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary"
+                                        data-bs-dismiss="modal">Close</button>
+                                    <button type="button" class="btn btn-primary">Create</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- -------------------------Cards---------------- -->
+            <!-- -----------------detail diplay card------- -->
+            <div class="all-Schedule">
+                <div class="card schedule__card">
+                    <div class="card-header all-Schedule__header ">
+                        <div class="header-text">
+                            <h5>Winter Training Schedule</h5>
+                            <p>4 weeks | 12 Sessions</p>
+                        </div>
+                        <div class="header-rightSide-icon">
+                            <span>
+                                <i class="bi bi-pencil-square "></i>
+                            </span>
+                            <span>
+                                <i class="bi bi-trash trash"></i>
+                            </span>
+                            <span class="expand-arrow">
+                                <i class="bi bi-caret-up-fill "></i>
+                            </span>
+                        </div>
+                    </div>
+                    <div class="card-body ">
+                        <div class="card-body__dateAndButton">
+                            <div class="date-text">
+                                <div class="startDate-text">
+                                    <p>START DATE</p>
+                                    <p style="font-weight:500; font-size:1.2em">25 January 2019</p>
+                                </div>
+                                <div class="endDate-text">
+                                    <p>END DATE</p>
+                                    <p style="font-weight:500; font-size:1.2em">25 February 2019</p>
+                                </div>
+                            </div>
+                            <button class="btn btn-success">Update</button>
+                        </div>
+                        <div class="schedule__selector">
+                            <div class="form-check-inline schedule__checkbox">
+                                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1"
+                                    value="option1">
+                                <label class="form-check-label" for="inlineRadio1">Sunday</label>
+                            </div>
+                            <div class="form-check-inline schedule__checkbox">
+                                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1"
+                                    value="option1">
+                                <label class="form-check-label" for="inlineRadio1">Monday</label>
+                            </div>
+                            <div class="form-check-inline schedule__checkbox">
+                                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1"
+                                    value="option1">
+                                <label class="form-check-label" for="inlineRadio1">Tuesday</label>
+                            </div>
+                            <div class="form-check-inline schedule__checkbox">
+                                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1"
+                                    value="option1">
+                                <label class="form-check-label" for="inlineRadio1">Wednesday</label>
+                            </div>
+                            <div class="form-check-inline schedule__checkbox">
+                                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1"
+                                    value="option1">
+                                <label class="form-check-label" for="inlineRadio1">Thursday</label>
+                            </div>
+                            <div class="form-check-inline schedule__checkbox">
+                                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1"
+                                    value="option1">
+                                <label class="form-check-label" for="inlineRadio1">Friday</label>
+                            </div>
+                            <div class="form-check-inline schedule__checkbox">
+                                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1"
+                                    value="option1">
+                                <label class="form-check-label" for="inlineRadio1">Saturday</label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- --------------second card------------ -->
+                <div class="card schedule__card">
+                    <div class="card-header all-Schedule__header ">
+                        <div class="header-text">
+                            <h5>Winter Training Schedule</h5>
+                            <p>4 weeks | 12 Sessions</p>
+                        </div>
+                        <div class="header-rightSide-icon">
+                            <span>
+                                <i class="bi bi-pencil-square "></i>
+                            </span>
+                            <span>
+                                <i class="bi bi-trash trash"></i>
+                            </span>
+                            <span class="expand-arrow">
+                                <i class="bi bi-caret-up-fill "></i>
+                            </span>
+                        </div>
+                    </div>
+                    <div class="card-body schedule-card__body">
+                        <div class="card-body__dateAndButton">
+                            <div class="date-text">
+                                <div class="startDate-text">
+                                    <p>START DATE</p>
+                                    <p style="font-weight:500; font-size:1.2em">25 January 2019</p>
+                                </div>
+                                <div class="endDate-text">
+                                    <p>END DATE</p>
+                                    <p style="font-weight:500; font-size:1.2em">25 February 2019</p>
+                                </div>
+                            </div>
+                            <button class="btn btn-success">Update</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+
+    </div>
+    </div>
+</body>
+
+</html>

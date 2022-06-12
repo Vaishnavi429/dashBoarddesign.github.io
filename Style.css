@@ -1,0 +1,132 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.main-container {
+    display: flex;
+}
+
+.left-side {
+    padding-left: 2%;
+    padding-top: 3%;
+    width: 25%;
+    background: rgb(3, 140, 3);
+    height: 100vh;
+}
+
+.logo {
+    color: white;
+}
+
+.menu li {
+    color: white;
+    list-style: none;
+    font-size: 1.6em;
+    margin-top: 6%;
+}
+
+.Active {
+    background: rgb(3, 84, 3);
+    padding: 8px 8px;
+
+    border-right: 5px solid white;
+}
+
+/* ----------------Adding new schedule modal design---------- */
+.schedule-date {
+    column-gap: 8px;
+}
+
+.designInput {
+    width: auto !important;
+}
+
+.schedule-container {
+    width: 75%;
+
+}
+
+.schedule-header {
+    background: rgb(253, 251, 251);
+    height: 5vw;
+    margin-bottom: 20px;
+    padding: 20px 30px;
+    box-shadow: 0 2px 2px 2px grey;
+}
+
+.schedule-button {
+    margin-left: 20px;
+}
+
+
+/* -------------Schedule-list-design----------- */
+
+.all-Schedule {
+    padding: 2%;
+
+}
+
+.schedule__card {
+    margin-bottom: 20px;
+}
+
+.schedule__card:hover {
+    transition: 0.5s;
+    box-shadow: 0px 0px 3px 3px rgb(196, 192, 192);
+}
+
+.all-Schedule__header {
+    display: flex;
+    justify-content: space-between;
+    padding-right: 30px !important;
+
+}
+
+.header-text {
+    padding-left: 3%;
+
+}
+
+.trash {
+    color: red;
+    padding: 10px;
+}
+
+.expand-arrow {
+    color: rgb(15, 226, 15);
+    font-size: 1.4em;
+    cursor: pointer;
+}
+
+.card-body__dateAndButton {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 10px;
+}
+
+.date-text {
+    display: flex;
+    column-gap: 20px;
+}
+
+p {
+    line-height: 0.9ch;
+}
+
+.schedule__selector {
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 40px;
+}
+
+.schedule__checkbox {
+    border: 1px solid rgb(180, 178, 178);
+    padding: 12px 15px;
+
+    border-radius: 5px;
+}
+
+.schedule-card__body {
+    display: none;
+}
